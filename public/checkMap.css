@@ -1,0 +1,11 @@
+.mainHeader {
+    border-bottom: 1px solid black;
+}
+div {
+    margin-top: 5px;
+
+}
+#myMap {
+    margin-top: 3em;
+    height: 240px;
+}
