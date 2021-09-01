@@ -1,0 +1,11 @@
+.mainHeader {
+    border-bottom: 1px solid black;
+}
+a {
+    text-decoration: none;
+}
+.lonlat {
+    margin-top: 10px;
+    background-color: cornflowerblue;
+    padding: 10px;
+}

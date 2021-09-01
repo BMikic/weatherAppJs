@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <h1 class="mainHeader">Welcome to weather app</h1>
+    <a href="/">Find ur location</a> | <a href="checkMap.html">View ur place on map</a>
+    <div class="lonlat">
+        <p>
+            The weather here at <span id="latitude"></span>&deg;, <span id="longitude"></span>&deg; <span id="summary"></span> with a temperature of <span id="temperature"></span>&deg; C.
+            The concentration of particulate matter (<span id="aq_parameter"></span>) is <span id="aq_value"></span> <span id="aq_units"></span> last read
+            on <span id="aq_date"></span>.
+        </p>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
