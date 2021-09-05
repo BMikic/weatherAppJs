@@ -13,20 +13,18 @@ if ('geolocation' in navigator) {
     const response = await fetch(api_url);
     const json = await response.json();
 
-    weather = json.weather.currently;
+    weather = json.weather;
     air = json.air_quality.results[0];
-    console.log(weather)
-    console.log(air)
+    // console.log(weather)
+    console.log(json)
 
-    document.getElementById('summary').textContent = weather.summary;
-    document.getElementById('temperature').textContent = weather.temperature;
+    document.getElementById('summary').textContent = weather.weather[0].description;
+    document.getElementById('temperature').textContent = weather.main.temp;
     
     document.getElementById('aq_parameter').textContent = air.measurements[0].parameter;
     document.getElementById('aq_value').textContent = air.measurements[0].value;
     document.getElementById('aq_units').textContent = air.measurements[0].unit;
     document.getElementById('aq_date').textContent = air.measurements[0].lastUpdated;
-
-    console.log(json);
   } catch {
     console.log('Something went wrong')
     air = { value: -1 };

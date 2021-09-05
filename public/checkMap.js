@@ -14,7 +14,7 @@ async function getData() {
         console.log(item)
         const marker = L.marker([item.lat, item.lon]).addTo(myMap);
          let txt = `
-         The weather here at ${item.lat}&deg;, ${item.lon}&deg; ${item.weather.summary} with a temperature of ${item.weather.temperature}&deg; C.
+         The weather here at ${item.lat}&deg;, ${item.lon}&deg; ${item.weather.weather[0].description} with a temperature of ${item.weather.main.temp}&deg; C.
          `;
         if (item.air.value < 0) {
             txt += " No air quality reading.";
